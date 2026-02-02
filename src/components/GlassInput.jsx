@@ -39,7 +39,7 @@ export default function GlassInput({
                 width: {
                     xs: "100%",
                     sm: "100%",
-                    md: "24rem"
+                    md: "97%"
                 },
                 margin: {
                     xs: "0.5rem",

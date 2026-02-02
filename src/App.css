@@ -396,7 +396,7 @@ a {
     margin-bottom: 6px;
 }
 
-.gift-card p {
+#giftcardP {
     font-size: 0.9rem;
     color: rgba(255, 255, 255, 0.75);
     margin-bottom: 14px;
@@ -550,16 +550,48 @@ a {
 
 .input-grid {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
 }
 
-@media (max-width: 988px) {
-    .input-grid {
-        flex-direction: column;
-    }
+
+.mode-selector {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 18px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.gift-grid{
+.mode-pill {
+  padding: 8px 18px;
+  border-radius: 14px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
 
+  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: rgba(255,255,255,0.85);
+
+  transition: all 0.25s ease;
 }
+
+.mode-pill:hover {
+  transform: translateY(-1px) scale(1.02);
+  background: rgba(255,255,255,0.12);
+}
+
+.mode-pill.active {
+  background: linear-gradient(
+    135deg,
+    rgba(96,165,250,0.45),
+    rgba(168,85,247,0.45)
+  );
+  border-color: rgba(255,255,255,0.35);
+  box-shadow: 0 6px 18px rgba(120,120,255,0.35);
+  color: white;
+}
+
